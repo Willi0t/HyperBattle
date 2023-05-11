@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-image: url(./img/gradient-background.webp);
+  font-family: "Russo One", sans-serif;
+
+}
+
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 1200px;
+  overflow: hidden;
+}
+
+.start-background {
+  width: 1200px;
+  position: absolute;
+  height: 85vh;
+}
+
+main canvas {
+  width: 100%;
+  height: 100%;
+}
+
+/* TOPBAR */
+.topbar-container {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 20px;
+  font-family: "Russo One", sans-serif;
+  color: orange;
+}
+
+/* HEALTHBAR */
+
+.healthbar-container {
+  position: relative;
+  height: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.healthbar-background {
+  border: 5px solid black;
+  height: 30px;
+  width: 100%;
+}
+
+.healthbar-healthbar {
+  background: linear-gradient(360deg, red, yellow);
+  width: 100%;
+  height: 100%;
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.eskil-name {
+  position: absolute;
+  background-color: black;
+  top: 110%;
+  left: 2%;
+}
+
+.jonathan-name {
+  position: absolute;
+  background-color: black;
+  top: 110%;
+  right: 2%;
+}
+
+/* TIMER / VS */
+
+.timer {
+  background-color: black;
+  width: 100px;
+  border-radius: 20%;
+  height: 70px;
+  flex-shrink: 0;
+  color: orange;
+}
+
+.vs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.4rem;
+  color: orange;
+  font-size: 1.5rem;
+  font-family: "Russo One", sans-serif;
+}
+
+
+/* START MENU */
+
+.start-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url(./img/streetfigher-background.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.start-button {
+  background-color: #cf245f;
+  background: linear-gradient(to bottom right, #fcd34d, #ef4444, #ec4899);
+
+  color: #fff;
+  font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1.125rem; /* 18px */
+  font-weight: 600;
+  line-height: 1.75rem; /* 28px */
+  text-align: center;
+
+
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+
+  padding: 1rem 1.25rem;
+  user-select: none;
+  -webkit-user-select: none;
+
+  transition: .2s;
+}
+
+.start-button:hover,
+.start-button:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em;
+  transform: translateY(-0.25em);
+}
+
+
+/* WINNER OVERLAY */
+
+.winner-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  backdrop-filter: sepia(60%);
+
+  z-index: 100;
+}
+
+.winner-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 46px;
+  background-color: black;
+  border-radius: 7px;
+  border: 10px ridge orange;
+}
+
+.winner-text {
+  color: orange;
+  font-size: 4rem;
+
+}
+
+.winner-button-container{
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+
+}
+
+.winner-button-container button{
+
+  border: 2px solid orange;
+  border-radius: 0.45rem;
+  padding: .4rem 1rem;
+
+  background-color: rgb(0, 0, 0);
+  
+
+  color: rgb(255, 166, 0);
+  font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: "Russo One", sans-serif;
+
+  font-size: 1.125rem; /* 18px */
+  font-weight: 200;
+  line-height: 1.75rem; /* 28px */
+  text-align: center;
+
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+
+  transition: transform .3s;
+
+  
+}
+
+.winner-button-container button:hover{
+
+  transform: scale(1.02);
+  
+}
